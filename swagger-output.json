@@ -1,0 +1,125 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "HEPN ORDER MANAGEMENT API",
+    "version": "1.0.0",
+    "description": "HEPN ORDER MANAGEMENT API"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:1234/"
+    },
+    {
+      "url": "https://localhost:1234/"
+    }
+  ],
+  "paths": {
+    "/orders/update-status": {
+      "post": {
+        "tags": [
+          "OrderStatus"
+        ],
+        "summary": "Update Order Status",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateOrderStatus"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateOrderStatus"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateOrderStatus"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateOrderStatus"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "OrderStatus": {
+        "type": "object",
+        "properties": {},
+        "xml": {
+          "name": "OrderStatus"
+        }
+      },
+      "UpdateOrderStatus": {
+        "type": "object",
+        "properties": {
+          "brand": {
+            "type": "string",
+            "example": "string"
+          },
+          "storeName": {
+            "type": "string",
+            "example": "string"
+          },
+          "orderStatus": {
+            "type": "string",
+            "example": "string"
+          },
+          "posSaleNo": {
+            "type": "string",
+            "example": "string"
+          }
+        },
+        "xml": {
+          "name": "UpdateOrderStatus"
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "msg": {
+            "type": "string",
+            "example": "string"
+          },
+          "stack": {
+            "type": "string",
+            "example": "string"
+          }
+        },
+        "xml": {
+          "name": "ErrorResponse"
+        }
+      }
+    }
+  }
+}

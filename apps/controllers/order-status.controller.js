@@ -1,6 +1,24 @@
 import { supabase } from "../configs/supabase.js";
 
 export const updateOrderStatus = async (req, res) => {
+  /* 	#swagger.tags = ['OrderStatus']
+        #swagger.summary = 'Update Order Status' */
+
+  /* #swagger.requestBody = {
+        required: true,
+        schema: { $ref: "#/definitions/UpdateOrderStatus" }
+    } */
+
+  /* #swagger.responses[200] = {
+        description: 'Successful Response',
+        schema: { $ref: '#/definitions/UpdateOrderStatus' }
+    } */
+
+  /* #swagger.responses[422] = {
+        description: 'Validation Error',
+        schema: { $ref: '#/definitions/ErrorResponse' }
+    } */
+
   const { brand, storeName, orderStatus, posSaleNo } = req.body;
 
   const brandData = await supabase.from("brand").select("*").eq("name", brand);

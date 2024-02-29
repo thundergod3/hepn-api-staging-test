@@ -1,7 +1,9 @@
+import { Router } from "express";
+
 import ordersRoute from "./orders.route.js";
 
-const routes = (express) => {
-  express.use("/orders", ordersRoute);
-};
+const routes = Router();
+
+routes.use("/orders", ordersRoute);
 
 export default routes;
