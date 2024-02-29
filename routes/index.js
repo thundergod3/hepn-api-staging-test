@@ -4,6 +4,6 @@ import ordersRoute from "./orders.route.js";
 
 const routes = Router();
 
-routes.use("/v1/orders", ordersRoute);
+routes.use("/api/orders", ordersRoute);
 
 export default routes;

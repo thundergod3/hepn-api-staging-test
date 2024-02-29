@@ -6,7 +6,7 @@
     "description": "HEPN ORDER MANAGEMENT API"
   },
   "paths": {
-    "/v1/orders/update-status": {
+    "/api/orders/update-status": {
       "post": {
         "tags": [
           "OrderStatus"
