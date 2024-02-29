@@ -5,16 +5,8 @@
     "version": "1.0.0",
     "description": "HEPN ORDER MANAGEMENT API"
   },
-  "servers": [
-    {
-      "url": "http://localhost:1234/"
-    },
-    {
-      "url": "https://localhost:1234/"
-    }
-  ],
   "paths": {
-    "/orders/update-status": {
+    "/v1/orders/update-status": {
       "post": {
         "tags": [
           "OrderStatus"
