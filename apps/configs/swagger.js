@@ -14,7 +14,7 @@ const doc = {
     version,
     description: "HEPN ORDER MANAGEMENT API",
   },
-  host: `localhost:${process.env.PORT || 1234}`,
+  host: "https://hepn-api-staging-83bad700e043.herokuapp.com",
   basePath: "/",
   schemes: ["http", "https"],
   consumes: ["application/json"],
