@@ -32,6 +32,14 @@ const doc = {
       stack: "string",
     },
   },
+  securityDefinitions: {
+    apiKeyAuth: {
+      type: "apiKey",
+      in: "header", // can be 'header', 'query' or 'cookie'
+      name: "X-API-KEY", // name of the header, query parameter or cookie
+      description: "Some description...",
+    },
+  },
 };
 const outputFile = "../../swagger-output.json";
 const endpointsFiles = ["./routes/index.js"];

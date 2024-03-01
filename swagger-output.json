@@ -13,6 +13,15 @@
         ],
         "summary": "Update Order Status",
         "description": "",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Successful Response",
@@ -28,6 +37,9 @@
                 }
               }
             }
+          },
+          "403": {
+            "description": "Forbidden"
           },
           "422": {
             "description": "Validation Error",
@@ -111,6 +123,14 @@
         "xml": {
           "name": "ErrorResponse"
         }
+      }
+    },
+    "securitySchemes": {
+      "apiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-API-KEY",
+        "description": "Some description..."
       }
     }
   }
